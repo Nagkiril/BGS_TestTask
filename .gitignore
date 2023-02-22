@@ -1,0 +1,9 @@
+PrototypeProject/Temp
+PrototypeProject/*.csproj
+PrototypeProject/*.sln
+PrototypeProject/Logs
+PrototypeProject/Library
+PrototypeProject/.vscode
+PrototypeProject/.vs
+PrototypeProject/obj
+PrototypeProject/UserSettings
