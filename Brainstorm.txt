@@ -1,0 +1,70 @@
+Features:
+ - 2D, top-town Stardew\Old RPG-like map
+ - Player:
+* Can be moving up, down, left and right (w\o gravity).
+* Collision\obstacle detection reserved to Unity.
+* Coming close to an interactable object shows a hotkey prompt above the Player - using that hotkey interacts with the environment (talks with NPCs too)
+* Can open Invnentory: via Hotkey or via a button on screen.
+	* Inventory to be described separately.
+** Would be nice to have: Pathfinding, click-to-move on screen.
+	+ Would be consistent with opening up UI with mouse.
+	- Personally, I find that feature not super useful as moving pseudo isometric 2D screen scrolling feels difficult to both look and navigate via mouse simultanously, unlike using WASD.
+	- Potentially may require more research and\or more assets.
+* Player and his inventory get saved automatically upon closing the game, and loaded in upon the game's start.
+	Must be serialized using JSON as I don't trust binary serialization;
+	For the purpose of this prototype, there'll be no verification via server or encryption; those features, however, are possible ideas to prevent player tampering if needed.
+		To prevent tampering, we can also split save files and verify DLC ownership in the game. There are a lot potential options here, but for now - no encryption, bare JSON.
+** Also would be really cool: 
+	If we could have shop keeper greet the player without dialogue. Launching the game many times would produce different replicas.
+** To make text localizable, it's a good idea to have a string dataset in a game with different keys in aforementioned set. Then, keys are to be pulled each time an actual localized string is required.
+	It would be really nice to have here, but it's a pain to maintain without a parser from external source (like Google tables as a basic example)
+	I am not sure if I can make said parser (although it is relatively simple) within allocated time while having the entirety of art and game design on me. Thus, it is marked as "nice-to-have".
+	This should be noted, however, the earlier localization is implemented, easier it is to maintain; doing this change late in the cycle would result in having to go over every UI-related prefab and making double sure it is localized.
+* Player's usual UI will also include a money counter on the side.
+* Start of the game is Player sitting in a bed, with a button prompt to begin a game being shown on the bottom in a bit of a pulsating manner to attract attention.
+	Pressing button allows the Player to get out of the bed.
+	UI appears, and the control is granted.
+	Bed itself should be made in classical manner with a bedsheet sprite hanging above the player and above the bed itself.
+** When Player gets out of the bed, we may make the sheet disappear, if it won't clash with the game's visual style too much.
+** To spend money for game's main feature, we need to get that money. Having some form of minigame or a method of acquiring that money would be a nice-to-have feature.
+	If I'll be pressed on time (and originally for testing), I'll be using a simple interactable bag of money that will toss coins around.
+	Those coins will be pickable by player after a bit of time, and after some more time, they'll magnet towards the player if he's within close proximity.
+	What actual minigame may be is to be decided upon.	
+
+ - Inventory
+Originally:
+* Cell-based, with a money counter on the side. Player can freely put items into any cell, and whenever a new item is acquired, it occupies first free slot.
+	- This isn't very good, because so far design has been straying away from mouse control.
+	- Having all items in front of you at all times would be rather problematic if we want to customize looks of our character (kind of the whole point).
+Now:
+* On the left side you should see your character in the world. During this time, character faces the screen.
+* On the right of the character there are slots for items equipped by character. One of the slots is selected.
+	Selecting another slot is done via W-S keys
+* On the right of the equipment slots there's inventory. Inventory shows all unequipped items from the category of selected slot.
+	You can scroll through those items using A-D keys; one of the items is selected by default
+	Pressing R equips the item from unequipped ones into a slot, and naturally unequips previously equipped item (if any).
+** This control scheme feels ergonomic but also somewhat restrictive.
+	It would be great if we could rotate our character (make him face different directions) so we can have a better comparison of items.
+	At the same time, we want to make the game play well with just KBM setup, no gamepads. With gamepads it would, of course, be easier.
+	For rotation keys, we can use Q-E as a nice-to-have feature (Q to rotate left, E to rotate right)
+* Equipped items must be shown on a player. Considering references, for each item we'd need the following art resources:
+	Front equipped sprite
+	Side equipped sprite (always must be facing same side for ALL items, we mirror it for the other)
+	Back equipped sprite
+	Item icon
+* For now let's decide on 4 types of items (and thus 4 slots to be equipped):
+	Headpiece
+	Chestpiece
+	Pants
+	Boots
+		Each piece will affect certain parts of the Player, who probably will be comprised of sprite pieces (similar to what we see on LSM steam page).
+		It is possible to attach additional animators for dangly pieces like green jacket on the steam page, but for now I'm gonna work a bit simpler right now.
+** Nice-to-have features: Some statblock for items and\or UI description for them.
+	Can kinda cut the feature down by just showing selected item's name - this would be rather simple.
+	Stats could include how heat insulating or "warm" a piece of clothing is, current state (whether in need of repairs or not), how dirty it is, et cetera.
+** An even nicer-to-have feature: being able to recolor piece of clothing (again, taking inspiration from LSM).
+	For this I would maybe make a specific NPC aside from shopkeeper.
+
+
+Talking
+* First time we talk to an NPC via interaction prompt, we should get additional dialogue; Every next interaction should yield just 1 line (or no dialogue at all) to make player
