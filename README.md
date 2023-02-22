@@ -1,7 +1,7 @@
 # BGS_TestTask
 Test task to be reviewed by Blue Gravity Studio.
 
-Rundown of the contents for this repo:
+Rundown of the contents for this branch:
 
 **PrototypeProject** - a Unity Project folder (where most of the non-essential files are omitted for ease of pushing and pulling). Opening this folder in Unity 2021.3.2f1 ought to yield a fully accessible project.
 
