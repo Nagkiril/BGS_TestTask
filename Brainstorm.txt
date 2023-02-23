@@ -68,3 +68,13 @@ Now:
 
 Talking
 * First time we talk to an NPC via interaction prompt, we should get additional dialogue; Every next interaction should yield just 1 line (or no dialogue at all) to make player
+
+
+
+
+Development:
+- Considering we're making a top-down map, I decided to opt for writing my own movement (it is rather simple here)
+- Since I have a lot of features in mind and time is somewhat short, I went with old input system as I have a lot of experience with it.
+- Got a crash on the "Undo" operation after creating Dynamic Sprite. Welp.
+- I was pleasantly surprised with some 2D features this version of Unity had; Back in the day I really wanted a sprite deformer, and Sprite Shapes really remind me of that feature.
+- Background sprite would likely be tiled and generated; for this prototype, something more simple like just a sprite with tiling would do.
