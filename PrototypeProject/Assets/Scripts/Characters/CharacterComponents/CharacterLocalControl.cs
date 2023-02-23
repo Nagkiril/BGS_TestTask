@@ -38,7 +38,7 @@ namespace Prototype.Characters.CharacterComponents
                 Vector2 movementAxis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 if (movementAxis != Vector2.zero)
                 {
-                    
+                    OrderMovement(movementAxis);
                 }
             }
         }

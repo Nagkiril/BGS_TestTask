@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Prototype.Environment;
 
 namespace Prototype.Characters.CharacterComponents
 {
@@ -23,6 +23,10 @@ namespace Prototype.Characters.CharacterComponents
         new void Start()
         {
             base.Start();
+            if (isLocalPlayer)
+            {
+                CameraController.SetFollowTarget(transform);
+            }
         }
 
 

@@ -78,3 +78,6 @@ Development:
 - Got a crash on the "Undo" operation after creating Dynamic Sprite. Welp.
 - I was pleasantly surprised with some 2D features this version of Unity had; Back in the day I really wanted a sprite deformer, and Sprite Shapes really remind me of that feature.
 - Background sprite would likely be tiled and generated; for this prototype, something more simple like just a sprite with tiling would do.
+- Sorely missing some form of a grid system and I think collision for movement detection ideally should be some kind of simplistic homebrew; Will not be implementing this, because again, pressured on time.
+	But I do think it's kind of cool that we can move relatively freely in 2D space.
+
