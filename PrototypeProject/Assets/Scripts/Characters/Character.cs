@@ -36,7 +36,13 @@ namespace Prototype.Characters
 
         public void Move(Vector2 movementAxis)
         {
-            movement.ApplyMovement(movementAxis);
+            bool isMoving = movementAxis.sqrMagnitude > 0.1;
+            visuals.SetMoving(isMoving);
+            if (isMoving)
+            {
+                movement.ApplyMovement(movementAxis);
+                visuals.FaceDirection(movementAxis);
+            }
         }
     }
 }

@@ -81,3 +81,14 @@ Development:
 - Sorely missing some form of a grid system and I think collision for movement detection ideally should be some kind of simplistic homebrew; Will not be implementing this, because again, pressured on time.
 	But I do think it's kind of cool that we can move relatively freely in 2D space.
 
+Visuals:
+- I am certainly not an artist, but I nonetheless decided to make my own art. It is bad, but at the very least game will be looking consistent(-ly goofy).
+	I tried looking for something that could fit current design ideas I have, but couldn't find packs that would look well together and complete the game.
+- While making basic GameObject hierarchy, I did my best to leave Order In Layer space between character's parts.
+	This is in case I'll get around to implementing additional sprites that could appear on the character, like sides of the jacket from LSW Steam page video.
+	Depending on the project's requirements, it is possible to go *very* deep with this kind of customization: we can add more animators for those details that will sync with main animator's parameters, we can bind custom logic to them, and so on.
+	I think I will either not implement such details or make them basic sprites that overlay above clothing's main part. Time's of the essence.
+- For character's rotation, originally I planned to have an Animator integer parameter, but now I think I'll use 3 separate triggers to apply required rotation to character model.
+	This way I can minimize links in between different animations while maintaining just 1 animator for main character pieces.
+	Yes, 3 triggers does feel a bit hacky, but I think it's something we can hardcode because it's highly unlikely we'll have another type of rotation in-game.
+
