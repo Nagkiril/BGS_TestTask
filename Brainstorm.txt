@@ -91,4 +91,9 @@ Visuals:
 - For character's rotation, originally I planned to have an Animator integer parameter, but now I think I'll use 3 separate triggers to apply required rotation to character model.
 	This way I can minimize links in between different animations while maintaining just 1 animator for main character pieces.
 	Yes, 3 triggers does feel a bit hacky, but I think it's something we can hardcode because it's highly unlikely we'll have another type of rotation in-game.
-
+- I think I ***really*** need to implement item detail system, because hats otherwise wouldn't work that well.
+	With those we could accomodate exposed skin of the characters with relative ease; imagine fingerless gloves, T-shirts, bandanas, et cetera.
+	Hats could have a sprite behind the head (if it doesn't obstruct character's face for example) if needed.
+	We could also make things such as backpacks and other attachments.
+	I will finish the rest of the requirements first, and then this feature will be top priority if I make it in time.
+- Still, feels super unfortunate how rushed it all is. Even from notes it should be visible that Day 1 I already knew that time constraints will be difficult, but even then seems like I was too ambitious.

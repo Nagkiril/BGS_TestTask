@@ -339,8 +339,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314f2e1444335c44aa6c1b35066f78bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterFacing: 2
-  parts: []
+  parts:
+  - Part: 0
+    MainRenderers:
+    - {fileID: 804429090}
+    DefaultSprites: []
+  - Part: 1
+    MainRenderers:
+    - {fileID: 191023358}
+    - {fileID: 1064165058}
+    - {fileID: 483500400}
+    - {fileID: 1062595416}
+    - {fileID: 231070553}
+    DefaultSprites: []
+  - Part: 2
+    MainRenderers:
+    - {fileID: 840094920}
+    - {fileID: 2132422374}
+    DefaultSprites: []
+  - Part: 3
+    MainRenderers:
+    - {fileID: 438944305}
+    - {fileID: 2019472010}
+    - {fileID: 1287639996}
+    - {fileID: 872835257}
+    - {fileID: 1597865242}
+    DefaultSprites: []
+  - Part: 4
+    MainRenderers:
+    - {fileID: 2102521737}
+    - {fileID: 1350317181}
+    DefaultSprites: []
 --- !u!1 &106628663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,8 +3881,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314f2e1444335c44aa6c1b35066f78bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterFacing: 1
-  parts: []
+  parts:
+  - Part: 0
+    MainRenderers:
+    - {fileID: 1088916964}
+    DefaultSprites: []
+  - Part: 1
+    MainRenderers:
+    - {fileID: 30639525}
+    - {fileID: 1116769335}
+    - {fileID: 1712798600}
+    - {fileID: 324150507}
+    - {fileID: 580960379}
+    DefaultSprites: []
+  - Part: 2
+    MainRenderers:
+    - {fileID: 14165434}
+    - {fileID: 1796318996}
+    DefaultSprites: []
+  - Part: 3
+    MainRenderers:
+    - {fileID: 1581729046}
+    - {fileID: 1460175411}
+    - {fileID: 1972935529}
+    - {fileID: 108485210}
+    - {fileID: 1125918146}
+    DefaultSprites: []
+  - Part: 4
+    MainRenderers:
+    - {fileID: 732711581}
+    - {fileID: 106628665}
+    DefaultSprites: []
 --- !u!1 &1084594169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,6 +4160,7 @@ GameObject:
   - component: {fileID: 1095225980}
   - component: {fileID: 1095225981}
   - component: {fileID: 1095225982}
+  - component: {fileID: 1095225984}
   - component: {fileID: 1095225983}
   m_Layer: 0
   m_Name: Player
@@ -4162,6 +4221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 1095225982}
   visuals: {fileID: 1897418032}
+  inventory: {fileID: 1095225984}
   isLocalPlayer: 1
 --- !u!114 &1095225982
 MonoBehaviour:
@@ -4190,6 +4250,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlledCharacter: {fileID: 1095225981}
+--- !u!114 &1095225984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095225978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db78843600d3bea46b52f1bb46ea1074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipSlots:
+  - AccountedPart: 0
+    EquippedItem:
+      Id: 
+      Name: 
+      Type: 0
+      Icon: {fileID: 0}
+      EquipFacings: []
+  - AccountedPart: 1
+    EquippedItem:
+      Id: 
+      Name: 
+      Type: 0
+      Icon: {fileID: 0}
+      EquipFacings: []
+  - AccountedPart: 2
+    EquippedItem:
+      Id: 
+      Name: 
+      Type: 0
+      Icon: {fileID: 0}
+      EquipFacings: []
+  - AccountedPart: 3
+    EquippedItem:
+      Id: 
+      Name: 
+      Type: 0
+      Icon: {fileID: 0}
+      EquipFacings: []
+  - AccountedPart: 4
+    EquippedItem:
+      Id: 
+      Name: 
+      Type: 0
+      Icon: {fileID: 0}
+      EquipFacings: []
+  inventory: []
 --- !u!1 &1116769333
 GameObject:
   m_ObjectHideFlags: 0
@@ -7318,8 +7427,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314f2e1444335c44aa6c1b35066f78bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterFacing: 0
-  parts: []
+  parts:
+  - Part: 0
+    MainRenderers:
+    - {fileID: 121560837}
+    DefaultSprites: []
+  - Part: 1
+    MainRenderers:
+    - {fileID: 1782834028}
+    - {fileID: 1149888206}
+    - {fileID: 679454311}
+    - {fileID: 1849035157}
+    - {fileID: 1084594171}
+    DefaultSprites: []
+  - Part: 2
+    MainRenderers:
+    - {fileID: 1261954874}
+    - {fileID: 1848746842}
+    DefaultSprites: []
+  - Part: 3
+    MainRenderers:
+    - {fileID: 1457515900}
+    - {fileID: 953630710}
+    - {fileID: 1677350037}
+    - {fileID: 1241201067}
+    - {fileID: 221960587}
+    DefaultSprites: []
+  - Part: 4
+    MainRenderers:
+    - {fileID: 1959901578}
+    - {fileID: 642133856}
+    DefaultSprites: []
 --- !u!1 &1972935527
 GameObject:
   m_ObjectHideFlags: 0

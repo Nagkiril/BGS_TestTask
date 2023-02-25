@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Prototype.Characters.CharacterComponents.VisualSetup;
+using Prototype.Settings;
 
 namespace Prototype.Characters.CharacterComponents
 {
@@ -40,9 +41,21 @@ namespace Prototype.Characters.CharacterComponents
             }
         }
 
-        public void ApplyCustomization()
+        public void ApplyItemLooks(ItemData item)
         {
+            for (var i = 0; i < characterDirections.Length; i++)
+            {
+                //Looks ugly, but time's running short
+                characterDirections[i].ApplyCustomization(item.Type, item.GetSprites((CharacterFacing)i));
+            }
+        }
 
+        public void ResetLooks(CharacterPart part)
+        {
+            for (var i = 0; i < characterDirections.Length; i++)
+            {
+                characterDirections[i].ApplyCustomization(part, null);
+            }
         }
 
         public void SetMoving(bool isMoving)
@@ -107,6 +120,7 @@ namespace Prototype.Characters.CharacterComponents
         Head,
         Torso,
         Hands,
-        Legs
+        Legs,
+        Feet
     }
 }

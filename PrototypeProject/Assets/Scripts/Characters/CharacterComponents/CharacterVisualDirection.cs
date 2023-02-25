@@ -37,10 +37,17 @@ namespace Prototype.Characters.CharacterComponents.VisualSetup
         {
             foreach (var part in parts)
             {
-                
+                if (part.Part == targetPart)
+                {
+                    for (var i = 0; i < part.MainRenderers.Length; i++)
+                    {
+                        part.MainRenderers[i].sprite = (appliedSprites != null ? appliedSprites[i] : part.DefaultSprites[i]);
+                    }
+                }
             }
             //Here we could add detail system which would attach bonus GameObjects into hierarchy: those could contain sprites, FX, logic - anything
             //Although an exciting possibility, I hope I'll have time to implement it...
+            //Spoiler alert: I won't :(
         }
     }
 }
