@@ -23,6 +23,7 @@ namespace Prototype.Environment
             } else
             {
                 Debug.LogWarning($"There are multiple CameraControllers on the scene! Excessive component in {gameObject.name} will be destroyed.");
+                Destroy(gameObject);
             }
         }
 

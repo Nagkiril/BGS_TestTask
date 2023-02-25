@@ -25,7 +25,20 @@ namespace Prototype.Characters.CharacterComponents
         }
 
 
+        public void AddItem(ItemData newItem)
+        {
+            if (!inventory.Contains(newItem) && equipSlots[(int)newItem.Type].EquippedItem != newItem)
+            {
+                inventory.Add(newItem);
+            }
+        }
 
+        public void RemoveItem(ItemData removedItem)
+        {
+            inventory.Remove(removedItem);
+        }
+
+        //It should be noted that we can equip an item that is not inside inventory, and then if unequipped normally, it'll be inside inventory - that is intended behavior.
         public void ApplyEquipment(ItemData newItem)
         {
             foreach (var slot in equipSlots)
@@ -33,6 +46,7 @@ namespace Prototype.Characters.CharacterComponents
                 if (slot.AccountedPart == newItem.Type)
                 {
                     slot.EquippedItem = newItem;
+                    RemoveItem(newItem);
                 }
             }
         }
@@ -43,9 +57,42 @@ namespace Prototype.Characters.CharacterComponents
             {
                 if (slot.AccountedPart == part)
                 {
-                    slot.EquippedItem = null;
+                    if (slot.EquippedItem != null && slot.EquippedItem.IsFilled())
+                    {
+                        var unequippedItem = slot.EquippedItem;
+                        slot.EquippedItem = null;
+                        AddItem(unequippedItem);
+                    }
                 }
             }
+        }
+
+        public List<ItemData> GetAllInventory()
+        {
+            return inventory;
+        }
+
+        public List<ItemData> GetInventoryForPart(CharacterPart targetPart)
+        {
+            var specificInventory = new List<ItemData>();
+            foreach (var item in inventory)
+            {
+                if (item.Type == targetPart)
+                {
+                    specificInventory.Add(item);
+                }
+            }
+            return specificInventory;
+        }
+
+        public List<ItemData> GetEquippedItems()
+        {
+            var equippedInventory = new List<ItemData>();
+            foreach (var slot in equipSlots)
+            {
+                equippedInventory.Add(slot.EquippedItem);
+            }
+            return equippedInventory;
         }
     }
 }

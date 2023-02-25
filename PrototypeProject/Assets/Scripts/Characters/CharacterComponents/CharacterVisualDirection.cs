@@ -20,7 +20,9 @@ namespace Prototype.Characters.CharacterComponents.VisualSetup
             public List<Sprite> DefaultSprites;
         }
 
-        private void Awake()
+        //We're using code in Initialize instead of Awake, because Awake might not trigger unless we make a turn where VisualDirection would be visible
+        //On the plus side - we can also have better control of when we want to load this logic (potentially evading peaks\spikes)
+        public void Initialize()
         {
             //When we unequip an item, I would like to return sprites back to their initial state, which may differ between characters with different visuals
             foreach (var part in parts)
@@ -41,7 +43,7 @@ namespace Prototype.Characters.CharacterComponents.VisualSetup
                 {
                     for (var i = 0; i < part.MainRenderers.Length; i++)
                     {
-                        part.MainRenderers[i].sprite = (appliedSprites != null ? appliedSprites[i] : part.DefaultSprites[i]);
+                        part.MainRenderers[i].sprite = (appliedSprites != null && appliedSprites.Length > 0 ? appliedSprites[i] : part.DefaultSprites[i]);
                     }
                 }
             }

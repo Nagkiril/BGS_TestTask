@@ -14,23 +14,22 @@ namespace Prototype.Characters
     public class Character : MonoBehaviour
     {
         [Header("Character Component References")]
-        [SerializeField] CharacterMovement movement;
-        [SerializeField] CharacterVisuals visuals;
-        [SerializeField] CharacterInventory inventory;
-
+        [SerializeField] protected CharacterMovement movement;
+        [SerializeField] protected CharacterVisuals visuals;
+        [SerializeField] protected CharacterInventory inventory;
+        public bool IsCharacterMovable { get; protected set; }
 
 
         //We may not need empty virtuals right now, but I wrote them down in case I'll be needing them later so that other scripts can already call their base while overriding
 
         protected virtual void Awake()
         {
-            
+            IsCharacterMovable = true;
         }
 
         protected virtual void Start()
         {
-            //Just for testing
-            EquipItem(ItemSettings.GetItemData("head_b"));
+
         }
 
         protected virtual void OnDestroy()
@@ -40,7 +39,7 @@ namespace Prototype.Characters
 
         public void Move(Vector2 movementAxis)
         {
-            bool isMoving = movementAxis.sqrMagnitude > 0.1;
+            bool isMoving = movementAxis.sqrMagnitude > 0.1 && IsCharacterMovable;
             visuals.SetMoving(isMoving);
             if (isMoving)
             {

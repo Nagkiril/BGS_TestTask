@@ -40,6 +40,12 @@ namespace Prototype.Characters.CharacterComponents
                 {
                     OrderMovement(movementAxis);
                 }
+
+                //This is a bit of a hack, but as I'm running out of time I decided to go for it: Player-specific controls
+                if (Input.GetKeyDown(KeyCode.E) && controlledCharacter is Player player)
+                {
+                    player.OpenInventory();
+                }
             }
         }
 

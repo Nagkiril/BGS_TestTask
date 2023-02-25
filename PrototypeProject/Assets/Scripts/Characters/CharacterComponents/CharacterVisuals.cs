@@ -14,11 +14,19 @@ namespace Prototype.Characters.CharacterComponents
     {
         //We're using animator statemachine here to handle most of the visual transitions
         [SerializeField] Animator ownAnim;
-        [SerializeField] CharacterAnimationEvents animEvents;
+        [SerializeField] AnimationEventSet animEvents;
         [SerializeField] CharacterVisualDirection[] characterDirections;
 
         CharacterFacing _currentFacing;
         bool _isMoving;
+
+        private void Awake()
+        {
+            foreach (var direction in characterDirections)
+            {
+                direction.Initialize();
+            }
+        }
 
         private void ApplyFacing(CharacterFacing newFacing)
         {
@@ -115,6 +123,7 @@ namespace Prototype.Characters.CharacterComponents
         Side = 2,
     }
 
+    //Looking back on the code, I think at least this enum could be moved to Settings (maybe together with CharacterFacing, but not necessarily)
     public enum CharacterPart
     {
         Head,

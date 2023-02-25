@@ -15,6 +15,7 @@ MonoBehaviour:
   items:
   - Id: head_a
     Name: Beanie
+    Price: 20
     Type: 0
     Icon: {fileID: 21300000, guid: 0ce1e44e2c4c01e4ba34a632d4a6bb8f, type: 3}
     EquipFacings:
@@ -26,6 +27,7 @@ MonoBehaviour:
       - {fileID: 547762611, guid: b57302623ec30fe418a71594c927b417, type: 3}
   - Id: head_b
     Name: Cap
+    Price: 40
     Type: 0
     Icon: {fileID: 21300000, guid: f905aeefe3932fc4eae31878a3c187e1, type: 3}
     EquipFacings:
@@ -35,3 +37,159 @@ MonoBehaviour:
       - {fileID: -2041769811, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
     - MainSprites:
       - {fileID: 547762611, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+  - Id: torso_a
+    Name: Blue Shirt
+    Price: 50
+    Type: 1
+    Icon: {fileID: 21300000, guid: deba031af9c0ce14595fa8bd451d72da, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 682321339, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 682321339, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 1985024152, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 241691858, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1868201210, guid: b57302623ec30fe418a71594c927b417, type: 3}
+  - Id: torso_b
+    Name: Purple Shirt
+    Price: 80
+    Type: 1
+    Icon: {fileID: 21300000, guid: 3f8028b85dd8d3f48a43057e3fccbc43, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 682321339, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 682321339, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 1985024152, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 241691858, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1868201210, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+  - Id: legs_a
+    Name: Teal Pants
+    Price: 80
+    Type: 3
+    Icon: {fileID: 21300000, guid: 1f1f09ce2b3f4844981ee79f7a741294, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: -2066026329, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: -2066026329, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 716514225, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 2074891319, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -898697752, guid: b57302623ec30fe418a71594c927b417, type: 3}
+  - Id: legs_b
+    Name: Dark Blue Pants
+    Price: 80
+    Type: 3
+    Icon: {fileID: 21300000, guid: 51f699709079b584b8105177d73abfdd, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: -2066026329, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: -2066026329, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 716514225, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 2074891319, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -898697752, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+  - Id: hands_a
+    Name: Teal Mittens
+    Price: 25
+    Type: 2
+    Icon: {fileID: 21300000, guid: 6531053aa6671d84ea0f9afdbeed9155, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 609256067, guid: b57302623ec30fe418a71594c927b417, type: 3}
+  - Id: hands_b
+    Name: Blue Mittens
+    Price: 50
+    Type: 2
+    Icon: {fileID: 21300000, guid: 10acbecb3d3a6a7419e96f97ceb0c660, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 609256067, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+  - Id: feet_a
+    Name: Sneakers
+    Price: 35
+    Type: 4
+    Icon: {fileID: 21300000, guid: fb42e8de7c4828949a8c512e5e85a1f1, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 923020030, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 923020030, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: -1415871455, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: -1415871455, guid: b57302623ec30fe418a71594c927b417, type: 3}
+    - MainSprites:
+      - {fileID: 1113423780, guid: b57302623ec30fe418a71594c927b417, type: 3}
+      - {fileID: 1113423780, guid: b57302623ec30fe418a71594c927b417, type: 3}
+  - Id: feet_b
+    Name: Boots
+    Price: 80
+    Type: 4
+    Icon: {fileID: 21300000, guid: 75e5f57c2dc3a6c438a8dde624bffdc6, type: 3}
+    EquipFacings:
+    - MainSprites:
+      - {fileID: 923020030, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 923020030, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: -1415871455, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: -1415871455, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+    - MainSprites:
+      - {fileID: 1113423780, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
+      - {fileID: 1113423780, guid: 49f6eef03b7078144b4743ad3880fbd3, type: 3}
