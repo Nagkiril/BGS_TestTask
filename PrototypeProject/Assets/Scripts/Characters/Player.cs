@@ -33,6 +33,8 @@ namespace Prototype.Characters
             if (isLocalPlayer)
             {
                 CameraController.SetFollowTarget(transform);
+                //Since we don't have saves, we'll just add coins here
+                ChangeCoins(300);
                 //We can have an empty inventory, but just for the sake of testing here's a couple free items
                 inventory.AddItem(ItemSettings.GetItemData("head_a"));
                 inventory.AddItem(ItemSettings.GetItemData("torso_b"));
@@ -43,7 +45,7 @@ namespace Prototype.Characters
         //Coin mechanic could be handled by a PlayerWallet component, ideally somewhere in the Model if we would be using MVC-like structure for player data
         public static bool ChangeCoins(int coinChange)
         {
-            bool isValidChange = coinChange > 0 || Coins >= coinChange;
+            bool isValidChange = (Coins + coinChange) >= 0;
             if (isValidChange)
             {
                 Coins += coinChange;

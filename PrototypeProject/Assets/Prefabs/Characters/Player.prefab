@@ -3761,7 +3761,7 @@ MonoBehaviour:
   inventory: {fileID: 7537510640412256425}
   interactor: {fileID: 6946007681034861314}
   isLocalPlayer: 1
-  coins: 500
+  coins: 0
 --- !u!114 &7537510640412256343
 MonoBehaviour:
   m_ObjectHideFlags: 0
