@@ -7,6 +7,7 @@ namespace Prototype.UI.InventoryComponents
 {
     /// <summary>
     /// This class handles selection of items inside an inventory grid.
+    /// Might be worth renaming\changing namespace as this component also runs ShopOverlay (shop window).
     /// </summary>
     public class InventoryGrid : MonoBehaviour
     {

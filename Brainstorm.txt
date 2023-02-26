@@ -99,3 +99,18 @@ Visuals:
 - Still, feels super unfortunate how rushed it all is. Even from notes it should be visible that Day 1 I already knew that time constraints will be difficult, but even then seems like I was too ambitious.
 - This should be the final (couple of) pushes; Going to have to cut out basically everything non-essential - deadlines take precedence. Thankfully I'll be able to use some more stuff from my older projects to get at least a tiny touch of polish.
 - Also sorry for the UI not adapting well; could certainly use more experience on how to make it look nice on PC.
+- I think opening inventory and shop have awkward button assignments, but I don't think I have an ideal solution for this issue.
+
+Inventory controls:
+W-S => change category
+A-D => switch to another item
+E => toggle inventory
+R => Unequip item
+Q => Equip item
+
+
+Shop controls:
+A-D => switch between items
+W-S => switch between selling\buying
+Q => quit the menu
+R => Purchase\sell item

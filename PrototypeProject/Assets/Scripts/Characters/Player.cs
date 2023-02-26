@@ -33,8 +33,6 @@ namespace Prototype.Characters
             if (isLocalPlayer)
             {
                 CameraController.SetFollowTarget(transform);
-                //Adding starting funds in a very hacky way
-                ChangeCoins(500);
                 //We can have an empty inventory, but just for the sake of testing here's a couple free items
                 inventory.AddItem(ItemSettings.GetItemData("head_a"));
                 inventory.AddItem(ItemSettings.GetItemData("torso_b"));
@@ -62,6 +60,27 @@ namespace Prototype.Characters
             }
         }
 
+        public void SyncPosition(Vector2 position, float duration = -1)
+        {
+            movement.SyncPosition(position, duration);
+        }
+
+        public void RotateTo(Vector2 direction)
+        {
+            visuals.FaceDirection(direction);
+        }
+
+        //A very hacky way to stop character from moving during interactions; Don't have any better ideas at this moment
+        public void Bind()
+        {
+            IsCharacterMovable = false;
+        }
+
+        public void Unbind()
+        {
+            IsCharacterMovable = true;
+        }
+
         #region IEquipmentHost implementation
 
         public void HostEquipItem(ItemData targetItem)
@@ -74,9 +93,10 @@ namespace Prototype.Characters
             UnequipFromPart(targetPart);
         }
 
-        public void HostInventoryClosed()
+        public void HostOverlayRelease()
         {
             IsCharacterMovable = true;
+            Unbind();
         }
 
         public List<ItemData> HostGetInventoryContent()
@@ -93,6 +113,23 @@ namespace Prototype.Characters
         {
             return inventory.GetEquippedItems();
         }
+
+        public void HostInventoryBuy(ItemData targetItem)
+        {
+            if (ChangeCoins(-1 * targetItem.Price))
+            {
+                inventory.AddItem(targetItem);
+            }
+        }
+
+        public void HostInventorySell(ItemData targetItem)
+        {
+            if (ChangeCoins(targetItem.Price))
+            {
+                inventory.RemoveItem(targetItem);
+            }
+        }
+
 
 
         #endregion

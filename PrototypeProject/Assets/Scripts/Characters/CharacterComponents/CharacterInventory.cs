@@ -45,8 +45,11 @@ namespace Prototype.Characters.CharacterComponents
             {
                 if (slot.AccountedPart == newItem.Type)
                 {
+                    var unequippedItem = slot.EquippedItem;
                     slot.EquippedItem = newItem;
                     RemoveItem(newItem);
+                    if (unequippedItem != null && unequippedItem.IsFilled())
+                        AddItem(unequippedItem);
                 }
             }
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,8 @@ namespace Prototype.Settings
             }
             return null;
         }
+
+        public static List<ItemData> GetAllItems() => instance.items.ToList();
     }
 
     /// <summary>

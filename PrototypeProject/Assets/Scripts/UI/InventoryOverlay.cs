@@ -113,7 +113,7 @@ namespace Prototype.UI
                 }
                 else
                 {
-                    _targetHost.HostInventoryClosed();
+                    _targetHost.HostOverlayRelease();
                 }
                 _isInTransition = true;
             }

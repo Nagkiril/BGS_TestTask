@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Prototype.Settings;
 using Prototype.Characters.CharacterComponents;
+using Prototype.Interactables;
 
 namespace Prototype.Characters
 {
@@ -17,6 +18,7 @@ namespace Prototype.Characters
         [SerializeField] protected CharacterMovement movement;
         [SerializeField] protected CharacterVisuals visuals;
         [SerializeField] protected CharacterInventory inventory;
+        [SerializeField] protected Interactor interactor;
         public bool IsCharacterMovable { get; protected set; }
 
 
@@ -35,6 +37,12 @@ namespace Prototype.Characters
         protected virtual void OnDestroy()
         {
 
+        }
+
+        public virtual void Interact()
+        {
+            if (interactor != null)
+                interactor.SendInteraction();
         }
 
         public void Move(Vector2 movementAxis)

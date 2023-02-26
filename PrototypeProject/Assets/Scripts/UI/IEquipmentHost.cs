@@ -18,7 +18,9 @@ namespace Prototype.UI
     {
         void HostEquipItem(ItemData targetItem);
         void HostUnequipSlot(CharacterPart targetPart);
-        void HostInventoryClosed();
+        void HostOverlayRelease();
+        void HostInventoryBuy(ItemData targetItem);
+        void HostInventorySell(ItemData targetItem);
         List<ItemData> HostGetInventoryContent();
         List<ItemData> HostGetInventoryContent(CharacterPart specificPart);
         List<ItemData> HostGetEquippedContent();
